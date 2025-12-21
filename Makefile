@@ -2,17 +2,22 @@ OCAMLBUILD := ocamlbuild
 OCAMLBUILD := $(OCAMLBUILD) -no-links
 OCAMLBUILD := $(OCAMLBUILD) -use-ocamlfind
 
-default: red
+GARBAGE := _build example red der
+
+default: der
 
 example:
 	$(OCAMLBUILD) termlib/example.byte
 	ln -sf _build/termlib/example.byte example
 
-red:
+der:
 	$(OCAMLBUILD) -I termlib src/main.native
-	ln -sf _build/src/main.native red
+	ln -sf _build/src/main.native der
 
 clean:
-	rm -rf _build example red
+	$(RM) -rf $(GARBAGE)
 
-.PHONY: default example red clean
+install:
+	install -m 755 ./der /usr/local/bin
+
+.PHONY: default example red clean der
