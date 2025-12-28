@@ -1,6 +1,9 @@
-# Red
+# Der
 
 A command-line text editor in OCaml.
+
+Originally called "red", but /bin/red on a normal Linux box is ed in restricted mode, so
+I renamed it to "der".
 
 ## Help
 
