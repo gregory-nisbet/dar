@@ -18,6 +18,6 @@ clean:
 	$(RM) -rf $(GARBAGE)
 
 install:
-	install -m 755 ./der /usr/local/bin
+	install -m 755 ./dar /usr/local/bin
 
 .PHONY: default example red clean der dar
