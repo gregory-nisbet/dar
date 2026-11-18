@@ -1,9 +1,9 @@
-# Der
+# Dar
 
 A command-line text editor in OCaml.
 
 Originally called "red", but /bin/red on a normal Linux box is ed in restricted mode, so
-I renamed it to "der".
+I renamed it to "dar". ("der" sounds like "dir", which is not great)
 
 ## Help
 
@@ -33,17 +33,17 @@ Alternatively, you can use OPAM (OCaml Package Manager, https://opam.ocaml.org):
     opam init
     opam switch 4.03.0
 
-Compile Red by running:
+Compile Dar by running:
 
     make
 
 A symbolic link is created to the executable. Run it with:
 
-    ./red
+    ./dar
 
 You can specify filenames on the command-line to open them immediately.
 
 ## License
 
-Red is released under the MIT license.
+Dar is released under the MIT license.
 See the `LICENSE` file.
